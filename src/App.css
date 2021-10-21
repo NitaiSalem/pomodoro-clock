@@ -1,0 +1,275 @@
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+  }
+  
+  body{
+    margin-top:0;
+      background-color: rgb(31, 185, 134); 
+  font-family: 'Caveat', cursive;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    color: white;
+     overflow-x: hidden; 
+    overflow-y: hidden; 
+    
+  }
+  
+  .pomodoro-container{
+      display:flex;
+      flex-direction: column;
+      width: 60vw;
+  max-width: 700px;
+  min-width:300px;
+    max-height: 100vh;
+  
+  }
+  
+  .title{
+  font-size: 80px;
+  align-self: center;
+    margin-top: 10px;
+    margin-bottom:10px;
+  }
+  
+  .timer-controls-container{
+      display:flex;
+      justify-content: space-evenly;
+    height:80px;
+    margin-bottom:150px;
+    margin-top:30px;
+  }
+  
+  button{
+    border:none;
+    background-color:  rgb(31, 185, 134);
+    color:white;
+  }
+  
+  button:hover{
+    cursor:pointer;
+  }
+  
+  #break-label{
+    font-size: 38px;
+    margin-top:5px;
+    margin-bottom:5px;
+  }
+  #session-label{
+    font-size: 38px;
+    margin-top:5px;
+    margin-bottom:5px;
+  }
+  
+  .timer-controls{
+      display:flex;
+      justify-content: center;
+    align-items:center;
+    height:40px;
+  }
+  
+  #timer-label{
+    font-size: 40px;
+    margin-top:2px;
+    margin-bottom:2px;
+  }
+  
+  #time-left{
+    font-size:30px;
+    margin-top:2px;
+  }
+  
+  #break-length{
+    font-size:36px;
+    margin-right:8px;
+    margin-left: 5px;
+  }
+  #session-length{
+      font-size:36px;
+    margin-right:8px;
+    margin-left: 5px;
+  }
+  
+  .tomato{
+     background-color:tomato;
+      display:flex;
+      flex-direction: column;
+      align-self: center;
+      align-items: center;
+    position:relative;
+    height:150px;
+      width:300px;
+        border-radius:0 0 150px 150px;
+  }
+  
+  .tomato::before{
+    content:"";
+      width:96px;
+      height:96px;
+      border: 1px solid tomato;
+    background:tomato;
+    position:absolute;
+        border-radius:0 96px 0 0;
+      top:-98px;
+      right:0;
+  }
+  
+  .tomato::after{
+      content: "";
+      width:96px;
+      height:96px;
+      border: 1px solid tomato;
+      background: tomato;
+      position:absolute;
+      border-radius:96px 0 0 0;
+      top:-98px;
+    left:0;
+  }
+  
+  #tomatoFill{
+        width:108px;
+      height:48px;
+      background: tomato;
+      position:absolute;
+      top:-48px;
+      left:96px;
+  }
+  #tomatoFill::before {
+      content: "";
+      width:54px;
+      height:50px;
+      background: tomato;
+      position:absolute;
+      border-radius:0 48px 0 0;
+      top:-50px;
+  }
+  
+  
+  #tomatoFill::after {
+      content: "";
+      width:54px;
+      height:50px;
+      background: tomato;
+      position:absolute;
+      border-radius:48px 0 0 0;
+      top:-50px;
+      right:0;
+  }
+  
+  #tomatoTop{
+    background: #A8B848;
+    height:48px;
+      width:48px;
+      border-radius:48px 0 48px 0;
+      position:absolute;
+      transform: rotateZ(135deg);
+      top:-48px;
+      z-index:1;
+      left: 32px +  18px / 2;
+  }
+  
+  #tomatoTop::before {
+      content: "";
+      background: #A8B848;
+      height:48px;
+      width:48px;
+      border-radius:48px 0 48px 0;
+      position:absolute;
+      z-index:1;
+      transform: rotateZ(90deg);
+      top:36px;
+      transition: all .2s ease-in-out;
+  }
+  
+  #tomatoTop::after {
+      content: "";
+      background: #A8B848;
+      height:48px;
+      width:48px;
+      border-radius:48px 0 48px 0;
+      position:absolute;
+      z-index:1;
+      transform: rotateZ(90deg);
+      top:-2px;
+      right:39px;
+      transition: all .2s ease-in-out;
+  }
+  
+  
+  .bottom-buttons-container{
+      display:flex;
+      justify-content: center;
+    margin-top:8px;
+    margin-bottom:8px;
+
+  }
+  
+  #start_stop{
+    font-size:35px;
+    margin-right:40px;
+  }
+  
+  #reset{
+    font-size:26px;
+  }
+  
+  
+  @media (max-width: 800px){
+     
+    .title{
+      font-size:48px;
+      text-align:center; 
+    }
+    
+    #session-label{
+      font-size: 34px;
+    }
+    
+    #break-label{
+       font-size: 34px;
+    }
+    
+    #break-length{
+      margin-right:18px;
+      margin-left:15px;
+    }
+    #session-length{
+          margin-right:18px;
+      margin-left:15px;
+    }
+    
+    .timer-controls-container{
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      margin-top:50px;
+      margin-bottom:130px;
+    }
+    .tomato{
+      transform: scale(0.8);
+    }
+    
+    #timer-label{
+      font-size:50px;
+    }
+    
+    #time-left{
+      font-size:45px;
+    }
+    
+    i.fas::before{
+      font-size: 40px;
+  }
+    
+      i.far::before{
+      font-size: 50px;
+  }
+    .bottom-buttons-container{
+    margin-top:16px;
+  }
+  }
